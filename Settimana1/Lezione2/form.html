@@ -32,6 +32,34 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email"/>
         </fieldset>
+        <fieldset>
+            <legend>Competenze</legend>
+            <input type="checkbox" name="HTML" id="HTML">
+            <label for="HTML">HTML</label><br/>
+            <input type="checkbox" name="CSS" id="CSS">
+            <label for="HTML">CSS</label><br/>
+            <input type="checkbox" name="Javascript" id="Javascript">
+            <label for="Javascript">Javasript</label><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Tipologia di corso</legend>
+            <label for="corso">Corso scelto</label>
+            <select id="corso" name="corso">
+                <option value="" selected></option>
+                <option value="frontEnd">Front-End</option>
+                <option value="backEnd">Back-End</option>
+                <option value="fullStack">Full Stack</option>
+            </select>
+            <p></p>
+            <label for="durata">Tipo di corso</label>
+            <br/>
+            <input type="radio" id="partMatt" name="durata">
+            <label for="partMatt">Part-time (mattina)</label><br/>
+            <input type="radio" id="partSera" name="durata">
+            <label for="partSera">Part-time (sera)</label><br/>
+            <input type="radio" id="fullTime" name="durata">
+            <label for="fullTime">Full-time</label>
+        </fieldset>
     </form>
 
 
