@@ -24,10 +24,9 @@ h1 {
   text-align: center;
 }
 #featured {
-  border-left: 100px;
-  padding: 10px;
-  align-content: center;
   margin: 0 auto;
+  width: 50%;
+
 }
 .recipe {
   font-weight: bolder;
@@ -47,4 +46,12 @@ main {
 }
 img {
   width: 100%;
+}
+body{
+  margin: 0 auto;
+  width: vw;
+  max-width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+
 }
