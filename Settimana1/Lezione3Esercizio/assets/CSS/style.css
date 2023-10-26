@@ -34,6 +34,13 @@ h1 {
 h2 {
   font-weight: lighter;
 }
+h3 {
+  color: red;
+}
+ a {
+  color: #2c7771;
+}
+
 #dough {
   font-weight: bold;
 }
@@ -52,6 +59,4 @@ body{
   width: vw;
   max-width: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
-
-
 }
