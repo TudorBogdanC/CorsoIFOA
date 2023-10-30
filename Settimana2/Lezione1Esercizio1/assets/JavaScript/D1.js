@@ -10,12 +10,23 @@ REGOLE
 /* ESERCIZIO 1
  Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.
 */
-/* Stringa - singolo carattere o sequenza finita di caratteri
-Numerico - numero intero o decimale
-Booleano - dato vero o falso in base alla condizione da soddisfare 
-Null - assenza intenzionale di un oggetto
-Undefined - variabile senza valore assegnato o non definibile 
+
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+/* 
+
+TIPI PRIMITIVI
+stringa - singolo carattere o sequenza finita di caratteri
+numerico - numero intero o decimale
+booleano - dato vero o falso in base alla condizione da soddisfare 
+null - assenza intenzionale di un oggetto
+undefined - variabile senza valore assegnato o non definibile 
+data - data in ogni suo formato 
+
+TIPI COMPLESSI O DERIVATI
+Array
+Oggetto
+*/
 
 /* ESERCIZIO 2
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
@@ -28,14 +39,21 @@ console.log(myName);
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
+console.log(12+20);
+
+
+
+
 let numero1 = 12;
 let numero2 = 20;
 let somma = numero1 + numero2;
 
 console.log(somma);
 
-
-
+let nuovoNumero1 = 12;
+let nuovoNumero2 = 20;
+let nuovaSomma = nuovoNumero1 + nuovoNumero2;
+console.log(nuovaSomma);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 4
@@ -62,11 +80,14 @@ console.log(myName);
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
 let numero3 = 4;
 
-let diminuzione = 4 - x;
-console.log(diminuzione);
-/* SCRIVI QUI LA TUA RISPOSTA */
+let sottrazione = 4 - x;
+console.log(sottrazione);
+
 
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
