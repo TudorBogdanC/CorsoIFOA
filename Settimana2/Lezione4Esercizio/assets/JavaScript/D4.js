@@ -68,17 +68,15 @@ console.log(boundary(400));
  ritornare la stringa originale senza alterarla.
 */
 
-var frase = " sono una stringa";
+var phrase = " sono una stringa";
 var epicode = "EPICODE";
 
-function epify(str){
-    frase.split('');
-    if (frase.indexOf("EPICODE")===0){
-        return frase;
-    } else
-    return frase = epicode.concat(frase);
+function epify(str) {
+  phrase.split("");
+  if (phrase.indexOf("EPICODE") === 0) {
+    return phrase;
+  } else return (phrase = epicode.concat(phrase));
 }
-
 
 console.log(epify(epicode));
 
@@ -89,11 +87,31 @@ console.log(epify(epicode));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
+function check3and7(numero) {
+  numero = Math.abs(numero);
+  if (numero % 3 === 0 && numero % 7 === 0) {
+    console.log("numero divisibile per 3 e per 7");
+  } else if (numero % 7 === 0) {
+    console.log("numero divisibile per 7");
+  } else if (numero % 3 === 0) {
+    console.log("numero divisbile per 3");
+  } else {
+    console.log("non multiplo di 3 o di 7");
+  }
+}
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
+
+function reverseString(stringa) {
+  let stringaCapovolta = stringa.split("").reverse().join("");
+  return stringaCapovolta;
+}
+
+console.log(reverseString("tudor"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -102,12 +120,33 @@ console.log(epify(epicode));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
+let frase =
+  "Questo esercizio è il numero otto del gruppo di esercizi del giorno quattro settimana due";
+
+function upperFirst(stringa) {
+  let arrayFrase = stringa.split(" ");
+  let risultato = [];
+  for (let i = 0; i < arrayFrase.length; i++) {
+    let parolaFinale =
+      arrayFrase[i].charAt(0).toUpperCase() + arrayFrase[i].substring(1);
+    risultato.push(parolaFinale);
+  }
+  return risultato.join("");
+}
+
+console.log(upperFirst(frase));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+
+function cutString(stringa) {
+  return stringa.slice(1, stringa.length - 1);
+}
+
+console.log(cutString("Tudor Bogdan"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -116,3 +155,11 @@ console.log(epify(epicode));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+  let arrayNumeri = [];
+  for (let i = 0; i < n; i++) {
+    arrayNumeri.push(Math.floor(Math.random() * 11));
+  }
+  return arrayNumeri;
+}
+console.log(giveMeRandom(8));
