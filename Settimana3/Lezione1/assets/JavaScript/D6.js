@@ -19,7 +19,15 @@ concatena(str1, str2);
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
-
+let myArray = [];
+function randomNumber() {
+  for (let i = 0; i < 10; i++) {
+    let myRandom = Math.floor(Math.random() * 101);
+    myArray.push(myRandom);
+  }
+  console.log(myArray);
+}
+randomNumber();
 
 // creare funzione
 // all'interno creare array vuoto
@@ -32,36 +40,91 @@ concatena(str1, str2);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const arr = [1, 2, 3];
+function numeriPari() {
+  let arrayPari = [];
+  myArray.filter((el) => {
+    if (el % 2 === 0) {
+      arrayPari.push(el);
+    }
+  });
+  console.log(arrayPari);
+}
 
-const n = 5;
-
-// [6, 7, 8]
-
-const addN = function (arr, n) {
-  // tornare un nuovo array con ogni valore addizionato con n
-};
-
+numeriPari();
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+function sum() {
+  let somma = 0;
+  myArray.forEach((el) => {
+    somma += el;
+  });
+  return somma;
+}
+console.log(sum());
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+function sum2() {
+  let addizione = myArray.reduce((el, number) => number + el, 0);
+  return addizione;
+}
+console.log(sum2());
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+// newArray = [1, 3, 5]
+function more(n,array) {
+  const mappatura = array.map((el) =>  el * n)
+  return mappatura;
+}
+console.log(more(2, [1, 2, 3]));
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+array = ["Oggi", "è", "una", "bellissima", "giornata"]
+function str(array) {
+  
+  const lunghezzaStringhe = array.map((el) => el.length)
+  return lunghezzaStringhe
+}
+console.log(str(array));
+
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+let number = dispari();
+function dispari() {
+   let arrayVuoto = [];
+   for( i = 1; i <= 100; i+=2) {
+     arrayVuoto.push(i);
+   }
+   return arrayVuoto;
+}
+console.log(number);
+
+
+/* per sommare n numeri tra di loro
+
+let number = dispari();
+function dispari() {
+  let arrayVuoto = [];
+  for (i = 0; i <= 100; i++) {
+    arrayVuoto.push(i);
+  }
+  let x = arrayVuoto.reduce((el, n) => el + n, 0);
+  return x;
+}
+console.log(number); 
+
+*/
+
+
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
