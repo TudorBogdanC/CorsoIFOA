@@ -3,7 +3,8 @@
     */
 
 const changeTitle = function () {
-    document.querySelector("h1").innerText = "Questo è il nuovo titolo della pagina"
+  document.querySelector("h1").innerText =
+    "Questo è il nuovo titolo della pagina";
 };
 changeTitle();
 /* ESERCIZIO 2
@@ -11,7 +12,7 @@ changeTitle();
      */
 
 const addClassToTitle = function () {
-    document.querySelector("h1").className = "myHeading"
+  document.querySelector("h1").className = "myHeading";
 };
 addClassToTitle();
 
@@ -20,10 +21,10 @@ addClassToTitle();
        */
 
 const changePcontent = function () {
-    let pChildDiv = document.querySelectorAll("div p")
-    for(let i = 0 ; i < pChildDiv.length ; i++) {
-        pChildDiv[i].innerText = "Placeholders per testo modificato nei paragrafi"
-    }
+  let pChildDiv = document.querySelectorAll("div p");
+  for (let i = 0; i < pChildDiv.length; i++) {
+    pChildDiv[i].innerText = "Placeholders per testo modificato nei paragrafi";
+  }
 };
 
 changePcontent();
@@ -33,10 +34,10 @@ changePcontent();
        */
 
 const changeUrls = function () {
-    let arrayLinks = document.getElementsByTagName("a");
-    for(let i = 0; i < arrayLinks.length - 1; i++){
-        arrayLinks[i].href = "https://www.google.com"
-    }
+  let arrayLinks = document.getElementsByTagName("a");
+  for (let i = 0; i < arrayLinks.length - 1; i++) {
+    arrayLinks[i].href = "https://www.google.com";
+  }
 };
 changeUrls();
 
@@ -45,10 +46,10 @@ changeUrls();
      */
 
 const addToTheSecond = function () {
-    let secondList = document.getElementById("secondList");
-    let lista = document.createElement("li");
-    let newElement = secondList.appendChild(lista);
-    lista.innerText = "4th"
+  let secondList = document.getElementById("secondList");
+  let lista = document.createElement("li");
+  let newElement = secondList.appendChild(lista);
+  lista.innerText = "4th";
 };
 
 addToTheSecond();
@@ -58,10 +59,10 @@ addToTheSecond();
      */
 
 const addParagraph = function () {
-    let primoDiv = document.getElementById("primoDiv");
-    let paragraph = document.createElement("p");
-    primoDiv.appendChild(paragraph);
-    paragraph.innerText = "Henlo";
+  let primoDiv = document.getElementById("primoDiv");
+  let paragraph = document.createElement("p");
+  primoDiv.appendChild(paragraph);
+  paragraph.innerText = "Henlo";
 };
 
 addParagraph();
@@ -71,9 +72,8 @@ addParagraph();
      */
 
 const hideFirstUl = function () {
-    let firstList = document.getElementById("firstList");
-    firstList.style.display = "none";
-
+  let firstList = document.getElementById("firstList");
+  firstList.style.display = "none";
 };
 
 hideFirstUl();
@@ -83,8 +83,8 @@ hideFirstUl();
        */
 
 const paintItGreen = function () {
-    let arrayUl = document.querySelectorAll("ul");
-    arrayUl.forEach(element => element.style.backgroundColor = "green");
+  let arrayUl = document.querySelectorAll("ul");
+  arrayUl.forEach((element) => (element.style.backgroundColor = "green"));
 };
 paintItGreen();
 
@@ -92,13 +92,25 @@ paintItGreen();
         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
        */
 
-const makeItClickable = function () {};
+const makeItClickable = function () {
+  let testo = document.querySelector("h1");
+  testo.onclick = function () {
+    testo.innerText = testo.innerText.slice(0, -1);
+  };
+};
+makeItClickable();
 
 /* ESERCIZIO 10
         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
        */
 
-const revealFooterLink = function () {};
+const revealFooterLink = function () {
+    let linkFooter = document.querySelector("footer a");
+    linkFooter.onclick = function () {
+        alert(linkFooter.getAttribute("href")); 
+    }
+};
+revealFooterLink();
 
 /* ESERCIZIO 11
         Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
