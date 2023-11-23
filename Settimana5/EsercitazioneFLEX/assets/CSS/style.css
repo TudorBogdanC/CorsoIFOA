@@ -1,0 +1,56 @@
+#primo {
+  background-color: aquamarine;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 300px;
+}
+
+#secondo {
+  background-color: rgb(132, 55, 204);
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 300px;
+}
+
+#terzo {
+  background-color: bisque;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 300px;
+}
+
+#quarto {
+  background-color: rgb(27, 59, 30);
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 300px;
+}
+
+#quinto {
+  background-color: rgb(71, 58, 145);
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 300px;
+}
+
+#sesto {
+  background-color: rgb(200, 197, 24);
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 300px;
+}
+
+.container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+max-width: 80%;
+min-width: 5%;
+flex-basis: auto;
+justify-content:space-evenly;
+}
+
+
+
+
+
