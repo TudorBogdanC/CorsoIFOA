@@ -1,39 +1,52 @@
-#primo {
+.primo {
   background-color: aquamarine;
   padding: 0.5em;
   margin: 0.5em;
   width: 300px;
+  transition: width 3s, background-color 3s;
 }
 
-#secondo {
+.primo:hover {
+  width: 150px;
+  background-color: lightsalmon;
+}
+
+.secondo {
   background-color: rgb(132, 55, 204);
   padding: 0.5em;
   margin: 0.5em;
   width: 300px;
+  transition: width 3s, background-color 3s;
 }
 
-#terzo {
+.secondo:hover {
+  width: 150px;
+  background-color: lightseagreen;
+}
+
+.terzo {
   background-color: bisque;
   padding: 0.5em;
   margin: 0.5em;
   width: 300px;
 }
 
-#quarto {
+.quarto {
   background-color: rgb(27, 59, 30);
   padding: 0.5em;
   margin: 0.5em;
   width: 300px;
 }
 
-#quinto {
-  background-color: rgb(71, 58, 145);
+.quinto {
+  background-color: skyblue;
   padding: 0.5em;
   margin: 0.5em;
   width: 300px;
+  position: relative;
 }
 
-#sesto {
+.sesto {
   background-color: rgb(200, 197, 24);
   padding: 0.5em;
   margin: 0.5em;
@@ -41,16 +54,20 @@
 }
 
 .container {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-max-width: 80%;
-min-width: 5%;
-flex-basis: auto;
-justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  min-width: 5%;
+  flex-basis: auto;
+  justify-content: flex-end;
 }
 
+.quinto:hover {
+  animation: cambioColore 4s ease-in-out 0s infinite alternate both;
+}
 
-
-
-
+@keyframes cambioColore {
+  from {background-color: skyblue; left: 0px; right: 0px;}
+  to {background-color: slateblue; left: 200px; right: 200px;}
+}
