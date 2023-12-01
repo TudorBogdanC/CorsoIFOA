@@ -1,0 +1,15 @@
+$position: (10, 20, 25, 30, 50, 65, 75, 90, 100);
+
+@each $value in $position {
+    $val: $value*1%; // workaround per risultato in percentuale
+    .translate-#{$value} {
+        translate: 0 $val;
+    }
+}
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
