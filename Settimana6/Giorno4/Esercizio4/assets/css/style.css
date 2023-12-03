@@ -1,0 +1,48 @@
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica;
+}
+
+.campanella {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    margin: 2px 4px;
+    background-color: #908c8c36;
+    border-radius: 50%;  
+}
+
+.avatar img {
+    border-radius: 50%;
+}
+
+.navbar a {
+    color:black;
+}
+
+.heroCard {
+    background-color: #7049f2;
+}
+
+
+
+
+@media screen and (max-width: 970px) {
+    #header-wrapper {
+        justify-content: space-between;
+    }
+
+    #nav-wrapper {
+        justify-content: flex-end !important;
+    }
+
+    .a {order:0 !important;}
+    .b {order:-1 !important;
+        padding-right: 10px;
+    
+    }
+}
+
