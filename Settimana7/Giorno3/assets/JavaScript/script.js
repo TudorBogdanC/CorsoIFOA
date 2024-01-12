@@ -3,7 +3,7 @@ const url = "https://striveschool-api.herokuapp.com/books";
 
 // Funzione per scaricare i dati dalla API //
 
-async function getBooks() {
+async function getBooks() {   // dichiare asynch equivale ad usare una promise con away che equivale a then
   try {
     const response = await fetch(url);
     const data = await response.json();
